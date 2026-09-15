@@ -1,0 +1,3 @@
+4.1
+    + giá trị roundedCost in ra = 19
+    + Java đã thực hiện **truncation**, không phải rounding khi ép kiểu từ double sang in
