@@ -1,0 +1,42 @@
+4.1
+    - Nếu người dùng ấn nút "Cancel" thì chương trình vẫn hiển thị thông báo "You've chosen: NO", với giá trị option bằng JOptionPane.CLOSED_OPTION (-1)
+      Bởi vì hàm điều kiện chỉ kiểm tra có chính xác bằng "YES" không thì trả về "YES", 
+      ngược lại là "NO" với mọi trường hợp khác
+    - Có thể customize dialog với 2 option Yes/No hoặc 2 button với free text bằng truyền giá trị JOptionPane.YES_NO_OPTION
+    - Tổng kết giá trị các tham số:
+
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | STT| Tham số            | Kiểu dữ liệu   | Giá trị / Cấu trúc                                       |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 1  | parentComponent    | Component      | null: căn giữa màn hình                                  |
+    |    |                    |                | Component: component làm tham chiếu cho vị trí của hộp thoại                   |
+    |    |                    |                | Component: cửa sổ cha (JFrame/JDialog)                   |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 2  | message            | Object         |"free text"                                               |
+    |    |                    |                | Component: JLabel, JPanel,...                            |
+    |    |                    |                | Object[]: {object1, object2, ...}                        |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 3  | title              | String         | "free text"                                              |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 4  | optionType         | int            | JOptionPane.YES_NO_OPTION       (0)                      |
+    |    |                    |                | JOptionPane.YES_NO_CANCEL_OPTION (1)                     |
+    |    |                    |                | JOptionPane.OK_CANCEL_OPTION    (2)                      |
+    |    |                    |                | JOptionPane.DEFAULT_OPTION       (-1)                    |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 5  | messageType        | int            | JOptionPane.ERROR_MESSAGE       (0)                      |
+    |    |                    |                | JOptionPane.INFORMATION_MESSAGE (1)                     |
+    |    |                    |                | JOptionPane.WARNING_MESSAGE     (2)                     |
+    |    |                    |                | JOptionPane.QUESTION_MESSAGE    (3)                     |
+    |    |                    |                | JOptionPane.PLAIN_MESSAGE       (-1)                    |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 6  | icon               | Icon           | null: sử dụng icon mặc định                              |
+    |    |                    |                | ImageIcon: icon tùy chỉnh                                |
+    |    |                    |                | new ImageIcon("đường_dẫn_ảnh")                          |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 7  | options            | Object[]       | null: sử dụng nút mặc định                               |
+    |    |                    |                | {option1, option2, ...}: danh sách nút tùy chỉnh         |
+    |    |                    |                | Ví dụ: {"I do", "I don't"}                               |
+    +----+--------------------+----------------+----------------------------------------------------------+
+    | 8  | initialValue       | Object         | null: hệ thống tự chọn phần tử đầu tiên                  |
+    |    |                    |                | Ví dụ: customOptions[0]                                  |
+    +----+--------------------+----------------+----------------------------------------------------------+
